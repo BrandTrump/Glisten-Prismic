@@ -41,3 +41,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Use "Key Text" as a field for returning simple string.
 - <PrismicText field={slice.primary.heading} /> returns a string of text.
 - text-balance for extra typography flourish (only works on chrome).
+- asText() helper to convert rich text to a string.
+- grid-rows-subgrid maintains content alignment.

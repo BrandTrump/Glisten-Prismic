@@ -26,6 +26,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "showcase": {
+              "type": "SharedSlice"
+            },
+            "bento": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             },
