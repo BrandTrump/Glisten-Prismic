@@ -43,3 +43,23 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - text-balance for extra typography flourish (only works on chrome).
 - asText() helper to convert rich text to a string.
 - grid-rows-subgrid maintains content alignment.
+
+```
+            <div
+                key={caseStudy.id}
+                className="relative grid gap-4 opacity-85 transition-opacity duration-300 hover:cursor-pointer hover:opacity-100 md:grid-cols-2 md:gap-8 lg:grid-cols-3"
+              >
+                <h3 className="text-4xl">
+                  <PrismicText field={caseStudy.data.company} />
+                </h3>
+                <PrismicRichText field={caseStudy.data.description} />
+
+                <PrismicNextLink
+                  document={caseStudy}
+                  className="after:absolute after:inset-0 hover:underline"
+                ></PrismicNextLink>
+              </div>
+
+```
+
+- Setting position relative on the parent div then setting after:aboslute after:inset-0 on the link creates better accessibility for screen readers.
