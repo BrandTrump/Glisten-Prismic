@@ -64,3 +64,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Setting position relative on the parent div then setting after:aboslute after:inset-0 on the link creates better accessibility for screen readers.
 - Typography component for tailwind:
+- Use <React.Fragment></React.Fragment> inside of an iterator instead of <></>
