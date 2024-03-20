@@ -8,6 +8,7 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import clsx from "clsx";
+import { IoIosArrowForward } from "react-icons/io";
 
 /**
  * Props for `CaseStudies`.
@@ -59,10 +60,10 @@ const CaseStudies = async ({
                   </div>
                   <PrismicNextLink
                     document={caseStudy}
-                    className="after:absolute after:inset-0 hover:underline"
+                    className="inline-flex items-center gap-2 after:absolute after:inset-0 hover:underline"
                   >
                     Read <PrismicText field={caseStudy.data.company} /> case
-                    study
+                    study <IoIosArrowForward className="text-md" />
                   </PrismicNextLink>
                 </div>
 
