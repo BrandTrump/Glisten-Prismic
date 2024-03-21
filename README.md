@@ -28,3 +28,4 @@
 - Typography component for tailwind:
 - Use `<React.Fragment></React.Fragment>` inside of an iterator instead of `<></>` to set the `key={}`
 - `gsap.fromTo()` triggers all animations at the same time. Whereas `tl.fromTo()` triggers each animation one by one.
+- GSAP scrollTrigger ```toggleActions: 'play pause resume reverse``` https://gsap.com/docs/v3/Plugins/ScrollTrigger/ 
