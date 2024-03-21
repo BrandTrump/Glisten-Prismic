@@ -17,8 +17,7 @@ import {
 } from "react-icons/fa6";
 import background from "./background.jpg";
 import React from "react";
-import StylizedLogoMark from "./StylizedLogoMark";
-import clsx from "clsx";
+import AnimatedContent from "./AnimatedContent";
 
 /**
  * Props for `Intergrations`.
@@ -30,15 +29,6 @@ export type IntergrationsProps =
  * Component for "Intergrations" Slices.
  */
 const Intergrations = ({ slice }: IntergrationsProps): JSX.Element => {
-  const icons = {
-    digitalocean: <FaDigitalOcean />,
-    cloudflare: <FaCloudflare />,
-    npm: <FaNpm />,
-    github: <FaGithub />,
-    fly: <FaFly />,
-    figma: <FaFigma />,
-  };
-
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -62,31 +52,7 @@ const Intergrations = ({ slice }: IntergrationsProps): JSX.Element => {
           <PrismicRichText field={slice.primary.body} />
         </div>
 
-        <div className="mt-20 flex flex-col items-center md:flex-row">
-          {slice.items.map((item, i) => (
-            <React.Fragment key={i}>
-              {i === Math.floor(slice.items.length / 2) && (
-                <>
-                  <StylizedLogoMark />
-                  <div className="signal-line rotate-180 bg-gradient-to-t"></div>
-                </>
-              )}
-              <div className="pulsing-icon flex aspect-square shrink-0 items-center justify-center rounded-full border border-blue-50/30 bg-blue-50/25 p-3 text-3xl text-blue-100 opacity-40 md:text-4xl lg:text-5xl">
-                {item.icon && icons[item.icon]}
-              </div>
-              {i !== slice.items.length - 1 && (
-                <div
-                  className={clsx(
-                    "signal-line",
-                    i >= Math.floor(slice.items.length / 2)
-                      ? "rotate-180"
-                      : "rotate-0",
-                  )}
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+        <AnimatedContent slice={slice} />
       </div>
     </Bounded>
   );
